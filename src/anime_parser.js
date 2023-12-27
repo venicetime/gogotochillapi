@@ -10,7 +10,7 @@ import { extractFembed } from './helpers/extractors/fembed.js';
 import { USER_AGENT, renameKey } from './utils.js';
 
 const BASE_URL = 'https://gogoanime.film/';
-const BASE_URL2 = 'https://gogoanime.gg/';
+const BASE_URL2 = 'https://gogoanime3.net/';
 const ajax_url = 'https://ajax.gogo-load.com/';
 const anime_info_url = 'https://gogoanime.film/category/';
 const anime_movies_path = '/anime-movies.html';
@@ -181,7 +181,7 @@ export const scrapeM3U8 = async ({ id }) => {
 export const scrapeSearch = async ({ list = [], keyw, page = 1 }) => {
  try {
   const searchPage = await axios.get(
-   `${BASE_URL + search_path}?keyword=${keyw}&page=${page}`
+   `${BASE_URL2 + search_path}?keyword=${keyw}&page=${page}`
   );
   const $ = cheerio.load(searchPage.data);
 
